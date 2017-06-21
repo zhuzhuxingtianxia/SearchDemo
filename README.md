@@ -23,8 +23,8 @@
     <br>需要传入搜索对象所在的数组dataSources以及根据哪个属性字段进行搜索
     <br> 如：一个Person类，有name和address属性，然后我们按照名字搜索
       // dataSources为Person的数组容器，根据属性name进行搜索
-    <br>
-      [field popOverSource:self.dataSources withKey:@"name" index:^(NSInteger index) {
+    
+     <br> [field popOverSource:self.dataSources withKey:@"name" index:^(NSInteger index) {
           //index值是选中的内容在dataSources中的索引
           NSLog(@"dataSources index == %ld",index);
 
@@ -33,8 +33,8 @@
 
 例 3：textField添加在了scrollView及其子类的容器中的处理
     <br>如果field是添加在table的cell上，则需要设置UITextField+PopOver的scrollView属性，用于展示下拉框的位置以及滑动时取消键盘和下拉框的响应。
-    <br>
-    field.scrollView = self.tableView;
+    
+    <br> field.scrollView = self.tableView;
     /*
       设置下拉框的位置，默认是根据中心y点做分割，大于y下拉框在field上方显示
       下于y在下方显示。
