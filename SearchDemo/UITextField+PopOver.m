@@ -154,6 +154,12 @@ static void * ZJScrollViewOffsetContext = &ZJScrollViewOffsetContext;
     }
 }
 
+-(void)dealloc{
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UITextFieldTextDidChangeNotification object:self];
+    
+    [self.scrollView removeObserver:self forKeyPath:@"contentOffset" context:ZJScrollViewOffsetContext];
+}
+
 
 #pragma MARK --- setting source
 -(void)popOverSource:(NSArray*)dataArray index:(void (^)(NSInteger index))index{
@@ -455,13 +461,6 @@ static void * ZJScrollViewOffsetContext = &ZJScrollViewOffsetContext;
     
     
 }
-
--(void)dealloc{
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:UITextFieldTextDidChangeNotification object:self];
-    
-    [self.scrollView removeObserver:self forKeyPath:@"contentOffset" context:ZJScrollViewOffsetContext];
-}
-
 
 #pragma mark -- UITableViewDelegate
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
