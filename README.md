@@ -33,8 +33,8 @@
 
 例 3：textField添加在了scrollView及其子类的容器中的处理
     <br>如果field是添加在table的cell上，则需要设置UITextField+PopOver的scrollView属性，用于展示下拉框的位置以及滑动时取消键盘和下拉框的响应。
-    
-    <br> field.scrollView = self.tableView;
+###
+    field.scrollView = self.tableView;
     /*
       设置下拉框的位置，默认是根据中心y点做分割，大于y下拉框在field上方显示
       下于y在下方显示。
@@ -53,7 +53,7 @@
 
      }];
     */
-
+###
 ## 注意：
     textField不是添加在scrollView及其子类的容器中，但是textField所在的视图层次比较多时，则搜索下拉框不显示。
 
