@@ -57,7 +57,7 @@
     */
 ###
 ## 注意：
-    textField不是添加在scrollView及其子类的容器中，但是textField所在的视图层次比较多时，则搜索下拉框不显示。
+    若textField不是添加在scrollView及其子类的容器中，而且textField所在的视图层次比较多时，则搜索下拉框不显示。
 
 
 ###
