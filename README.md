@@ -28,7 +28,8 @@
           //index值是选中的内容在dataSources中的索引
           NSLog(@"dataSources index == %ld",index);
 
-      }];<br>
+      }];
+     <br>
 
 例 3：textField添加在了scrollView及其子类的容器中的处理
     <br>如果field是添加在table的cell上，则需要设置UITextField+PopOver的scrollView属性，用于展示下拉框的位置以及滑动时取消键盘和下拉框的响应。
