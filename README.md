@@ -8,7 +8,7 @@
 
 ## 使用说明
   这个搜索小功能是对textField的一个扩展，所以我们首先站到UITextField+PopOver这个扩展类，然后把它添加到工程去。
-## 导入文件
+<br>
   为了不影响本类的使用，在使用到搜索功能的文件中导入<#import "UITextField+PopOver.h">,哪个textField用到这个功能则可设置定义的属性或方法！
 
 例 1：对文本进行搜索
