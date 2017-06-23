@@ -56,6 +56,17 @@
      }];
     */
 ###
+
+例 4：在某些场景下我们点击textField在不输入内容就会显示之前输入的内容，或者我们只能选择而不需要输入。为了实现上述情况新增加了nonInputShow属性，
+    这个属性需要textField的代理方法配合来使用。
+###
+//这种情况下不会弹出键盘，而直接显示下拉框。return YES则下拉框键盘同时显示
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
+textField.nonInputShow = YES;
+return NO;
+}
+###
+
 ## 注意：
     若textField不是添加在scrollView及其子类的容器中，而且textField所在的视图层次比较多时，则搜索下拉框不显示。
 
