@@ -13,6 +13,7 @@
 #define NavH   64
 
 static void * ZJScrollViewOffsetContext = &ZJScrollViewOffsetContext;
+const NSNotificationName  ZJ_TextFieldWillEditingNotification = @"ZJ_TextField_WillEditing_Notification";
 
 @interface UITextField (_PopOver)
 @property(nonatomic,readwrite,strong)UITableView  *popList;
@@ -108,6 +109,19 @@ static void * ZJScrollViewOffsetContext = &ZJScrollViewOffsetContext;
     return [objc_getAssociatedObject(self, @selector(positionType)) integerValue];
 }
 
+-(void)setNonInputShow:(BOOL)nonInputShow{
+    if (nonInputShow) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:ZJ_TextFieldWillEditingNotification object:self];
+    }
+    
+    objc_setAssociatedObject(self, @selector(nonInputShow), [NSNumber numberWithBool:nonInputShow], OBJC_ASSOCIATION_COPY_NONATOMIC);
+}
+
+-(BOOL)nonInputShow{
+    
+    return [objc_getAssociatedObject(self, @selector(nonInputShow)) boolValue];
+}
+
 -(void)setScrollView:(UIScrollView *)scrollView{
     NSArray *gesArray = scrollView.gestureRecognizers;
     if (gesArray.count>2) {
@@ -157,6 +171,8 @@ static void * ZJScrollViewOffsetContext = &ZJScrollViewOffsetContext;
 -(void)dealloc{
     [[NSNotificationCenter defaultCenter] removeObserver:self name:UITextFieldTextDidChangeNotification object:self];
     
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:ZJ_TextFieldWillEditingNotification object:self];
+    
     [self.scrollView removeObserver:self forKeyPath:@"contentOffset" context:ZJScrollViewOffsetContext];
 }
 
@@ -168,8 +184,11 @@ static void * ZJScrollViewOffsetContext = &ZJScrollViewOffsetContext;
     self.oldIndex = index;
     [self buildPopList];
     
+    //add Notification
     //添加输入改变通知
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(inputChange:) name:UITextFieldTextDidChangeNotification object:self];
+    //添加开始编辑的通知
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(beginEditing:) name:ZJ_TextFieldWillEditingNotification object:self];
     
 }
 
@@ -183,9 +202,11 @@ static void * ZJScrollViewOffsetContext = &ZJScrollViewOffsetContext;
     self.keyString = [key copy];
     self.oldIndex = index;
     [self buildPopList];
-    
+    //add Notification
     //添加输入改变通知
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(inputObjcChange:) name:UITextFieldTextDidChangeNotification object:self];
+    //添加开始编辑的通知
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(beginEditing:) name:ZJ_TextFieldWillEditingNotification object:self];
 }
 
 
@@ -214,10 +235,11 @@ static void * ZJScrollViewOffsetContext = &ZJScrollViewOffsetContext;
     
 }
 
+#pragma mark -- 通知方法
 -(void)inputChange:(NSNotification*)notification{
     if (notification.name == UITextFieldTextDidChangeNotification && notification.object == self) {
 
-        if (self.text.length ==0) {
+        if (self.text.length ==0 && !self.nonInputShow) {
             self.bgView.frame = CGRectMake(self.frame.origin.x, CGRectGetMaxY(self.frame), CGRectGetWidth(self.frame), 0);
             self.popList.frame = self.bgView.bounds;
             [self.popList reloadData];
@@ -228,6 +250,16 @@ static void * ZJScrollViewOffsetContext = &ZJScrollViewOffsetContext;
         NSPredicate *predicate = [NSPredicate predicateWithFormat:[NSString stringWithFormat:@"SELF LIKE '*%@*'",[self replacingCharacter:self.text]]];
         NSArray *array = [self.dataArray filteredArrayUsingPredicate:predicate];
         
+        /*
+         //设置当完全输入时取消下拉框
+        if (array.count == 1) {
+            NSString *text = array[0];
+            if ([text isEqualToString:self.text]) {
+                [self hidePopOver];
+                return;
+            }
+        }
+        */
        array = [array sortedArrayUsingComparator:^NSComparisonResult(NSString *obj1, NSString *obj2) {
            NSComparisonResult result = NSOrderedSame;
            
@@ -254,7 +286,7 @@ static void * ZJScrollViewOffsetContext = &ZJScrollViewOffsetContext;
 -(void)inputObjcChange:(NSNotification*)notification{
     if (notification.name == UITextFieldTextDidChangeNotification) {
         
-        if (self.text.length ==0) {
+        if (self.text.length ==0 && !self.nonInputShow) {
             self.bgView.frame = CGRectMake(self.frame.origin.x, CGRectGetMaxY(self.frame), CGRectGetWidth(self.frame), 0);
             self.popList.frame = self.bgView.bounds;
             [self.popList reloadData];
@@ -270,6 +302,13 @@ static void * ZJScrollViewOffsetContext = &ZJScrollViewOffsetContext;
             [self changeInputSource:array];
         }
         
+    }
+}
+
+-(void)beginEditing:(NSNotification*)notification{
+    if (self.dataArray) {
+        //调整视图位置
+        [self changeInputSource:self.dataArray];
     }
 }
 
@@ -502,10 +541,9 @@ static void * ZJScrollViewOffsetContext = &ZJScrollViewOffsetContext;
     if (self.oldIndex) {
         NSInteger oldIndex = [self.dataArray indexOfObject:onj];
         self.oldIndex(oldIndex);
-        
-        [self hidePopOver];
     }
     
+    [self hidePopOver];
 }
 
 -(void)hidePopOver{

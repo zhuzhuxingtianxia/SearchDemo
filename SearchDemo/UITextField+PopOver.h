@@ -23,6 +23,11 @@ typedef NS_ENUM(NSUInteger, ZJPositionType) {
  默认自动显示，以中间位置为分界点
  */
 @property(nonatomic,assign)ZJPositionType  positionType;
+/*
+ 是否在没有输入内容的情况下显示,需要配合TextField代理方法一起使用
+ 默认NO,设置YES则在不输入内容时也会显示下拉框
+ */
+@property(nonatomic,assign)BOOL  nonInputShow;
 
 /*
  参数：
@@ -33,7 +38,7 @@ typedef NS_ENUM(NSUInteger, ZJPositionType) {
 
 /*
  参数：
- 字符串数据源，
+ 对象数据源，
  key按照对象某个属性值搜索，
  block返回选中的对象在数据源中的索引值
  */

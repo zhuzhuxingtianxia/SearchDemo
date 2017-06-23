@@ -9,7 +9,10 @@
 #import "Search1Controller.h"
 #import "UITextField+PopOver.h"
 
-@interface Search1Controller ()
+@interface Search1Controller ()<UITextFieldDelegate>
+{
+    UITextField *field;
+}
 @property (nonatomic, strong)NSArray *dataSources;
 @end
 
@@ -20,8 +23,15 @@
     self.view.backgroundColor = [UIColor groupTableViewBackgroundColor];
     // Do any additional setup after loading the view.
     
-    UITextField *field = [[UITextField alloc] initWithFrame:CGRectMake(20, 80, [UIScreen mainScreen].bounds.size.width - 40, 30)];
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
+    [button setTitle:@"改变数据源" forState:UIControlStateNormal];
+    button.frame = CGRectMake(10, 100, 100, 40);
+    [button addTarget:self action:@selector(changeDataSource) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:button];
+    
+    field = [[UITextField alloc] initWithFrame:CGRectMake(20, 80, [UIScreen mainScreen].bounds.size.width - 40, 30)];
     field.borderStyle = UITextBorderStyleRoundedRect;
+    field.delegate = self;
     [field popOverSource:self.dataSources index:^(NSInteger index) {
         NSLog(@"dataSources index == %ld",index);
         
@@ -29,6 +39,16 @@
     
     [self.view addSubview:field];
     
+}
+
+-(void)changeDataSource{
+    [field popOverSource:@[@"三字经",@"百家姓",@"弟子规",] index:nil];
+}
+
+#pragma mark --UITextFieldDelegate
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
+    textField.nonInputShow = YES;
+    return NO;
 }
 
 - (void)didReceiveMemoryWarning {

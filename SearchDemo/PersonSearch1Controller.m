@@ -10,7 +10,7 @@
 #import "UITextField+PopOver.h"
 #import "Person.h"
 
-@interface PersonSearch1Controller ()
+@interface PersonSearch1Controller ()<UITextFieldDelegate>
 @property (nonatomic, strong)NSArray *dataSources;
 
 @end
@@ -24,6 +24,7 @@
     UITextField *field = [[UITextField alloc] initWithFrame:CGRectMake(20, 80, [UIScreen mainScreen].bounds.size.width - 40, 30)];
     field.placeholder = @"请输入要搜索的人的名称";
     field.borderStyle = UITextBorderStyleRoundedRect;
+    field.delegate = self;
     [field popOverSource:self.dataSources withKey:@"name" index:^(NSInteger index) {
         NSLog(@"dataSources index == %ld",index);
         
@@ -31,6 +32,10 @@
     
     [self.view addSubview:field];
     
+}
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
+    //textField.nonInputShow = YES;
+    return YES;
 }
 
 -(NSArray*)dataSources{
