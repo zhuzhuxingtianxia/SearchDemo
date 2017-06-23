@@ -60,11 +60,11 @@
 例 4：在某些场景下我们点击textField在不输入内容就会显示之前输入的内容，或者我们只能选择而不需要输入。
     <br>为了实现上述情况新增加了nonInputShow属性，这个属性需要textField的代理方法配合来使用。
 ###
-     <br>//这种情况下不会弹出键盘，而直接显示下拉框。return YES则下拉框键盘同时显示
-      <br> -(BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
-         <br> textField.nonInputShow = YES;
-         <br> return NO;
-      <br>}
+     //这种情况下不会弹出键盘，而直接显示下拉框。return YES则下拉框键盘同时显示
+    -(BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
+          textField.nonInputShow = YES;
+          return NO;
+    }
 
 
 ## 注意：
