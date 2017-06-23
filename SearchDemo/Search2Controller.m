@@ -9,7 +9,7 @@
 #import "Search2Controller.h"
 #import "UITextField+PopOver.h"
 
-@interface Search2Controller ()
+@interface Search2Controller ()<UITextFieldDelegate>
 @property (nonatomic, strong)NSArray *dataSources;
 @end
 
@@ -19,6 +19,17 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor groupTableViewBackgroundColor];
     // Do any additional setup after loading the view.
+    
+   UITextField *nonfield = [[UITextField alloc] initWithFrame:CGRectMake(20, 80, [UIScreen mainScreen].bounds.size.width - 40, 30)];
+    nonfield.borderStyle = UITextBorderStyleRoundedRect;
+    nonfield.delegate = self;
+    [nonfield popOverSource:self.dataSources index:^(NSInteger index) {
+        NSLog(@"dataSources index == %ld",index);
+        
+    }];
+    
+    [self.view addSubview:nonfield];
+    
     UITextField *field = [[UITextField alloc] initWithFrame:CGRectMake(20, 350, [UIScreen mainScreen].bounds.size.width - 40, 30)];
     field.borderStyle = UITextBorderStyleRoundedRect;
     [field popOverSource:self.dataSources index:^(NSInteger index) {
@@ -29,6 +40,12 @@
     
     [self.view addSubview:field];
     
+}
+
+#pragma mark --UITextFieldDelegate
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
+    textField.nonInputShow = YES;
+    return NO;
 }
 
 - (void)didReceiveMemoryWarning {

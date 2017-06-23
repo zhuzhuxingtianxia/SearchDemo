@@ -9,7 +9,7 @@
 #import "Search1Controller.h"
 #import "UITextField+PopOver.h"
 
-@interface Search1Controller ()<UITextFieldDelegate>
+@interface Search1Controller ()
 {
     UITextField *field;
 }
@@ -31,7 +31,7 @@
     
     field = [[UITextField alloc] initWithFrame:CGRectMake(20, 80, [UIScreen mainScreen].bounds.size.width - 40, 30)];
     field.borderStyle = UITextBorderStyleRoundedRect;
-    field.delegate = self;
+
     [field popOverSource:self.dataSources index:^(NSInteger index) {
         NSLog(@"dataSources index == %ld",index);
         
@@ -45,11 +45,6 @@
     [field popOverSource:@[@"三字经",@"百家姓",@"弟子规",] index:nil];
 }
 
-#pragma mark --UITextFieldDelegate
-- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
-    textField.nonInputShow = YES;
-    return NO;
-}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
