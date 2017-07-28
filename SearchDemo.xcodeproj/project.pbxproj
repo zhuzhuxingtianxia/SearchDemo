@@ -21,6 +21,7 @@
 		B623784E1EF93674004DE0DB /* PersonSearch1Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = B623784D1EF93674004DE0DB /* PersonSearch1Controller.m */; };
 		B62378511EF9369F004DE0DB /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = B62378501EF9369F004DE0DB /* Person.m */; };
 		B62378541EF93A1A004DE0DB /* InputController.m in Sources */ = {isa = PBXBuildFile; fileRef = B62378531EF93A1A004DE0DB /* InputController.m */; };
+		B690BA491F2AE4A30011FD8B /* NSObject+AutoProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = B690BA481F2AE4A30011FD8B /* NSObject+AutoProperty.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,8 @@
 		B62378501EF9369F004DE0DB /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		B62378521EF93A1A004DE0DB /* InputController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputController.h; sourceTree = "<group>"; };
 		B62378531EF93A1A004DE0DB /* InputController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputController.m; sourceTree = "<group>"; };
+		B690BA471F2AE49D0011FD8B /* NSObject+AutoProperty.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+AutoProperty.h"; sourceTree = "<group>"; };
+		B690BA481F2AE4A30011FD8B /* NSObject+AutoProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+AutoProperty.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +137,8 @@
 				B623784F1EF9369F004DE0DB /* Person.h */,
 				B62378501EF9369F004DE0DB /* Person.m */,
 				B62378191EF91B70004DE0DB /* Main.storyboard */,
+				B690BA471F2AE49D0011FD8B /* NSObject+AutoProperty.h */,
+				B690BA481F2AE4A30011FD8B /* NSObject+AutoProperty.m */,
 				B623781C1EF91B70004DE0DB /* Assets.xcassets */,
 				B62378431EF91CF3004DE0DB /* UITextField+PopOver.h */,
 				B62378441EF91CF3004DE0DB /* UITextField+PopOver.m */,
@@ -308,6 +313,7 @@
 				B62378511EF9369F004DE0DB /* Person.m in Sources */,
 				B62378481EF91D58004DE0DB /* Search1Controller.m in Sources */,
 				B62378151EF91B6F004DE0DB /* AppDelegate.m in Sources */,
+				B690BA491F2AE4A30011FD8B /* NSObject+AutoProperty.m in Sources */,
 				B62378541EF93A1A004DE0DB /* InputController.m in Sources */,
 				B623784B1EF91D6C004DE0DB /* Search2Controller.m in Sources */,
 				B62378121EF91B6F004DE0DB /* main.m in Sources */,
@@ -545,6 +551,7 @@
 				B623783C1EF91B70004DE0DB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B623783D1EF91B70004DE0DB /* Build configuration list for PBXNativeTarget "SearchDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -553,6 +560,7 @@
 				B623783F1EF91B70004DE0DB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B62378401EF91B70004DE0DB /* Build configuration list for PBXNativeTarget "SearchDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -561,6 +569,7 @@
 				B62378421EF91B70004DE0DB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
