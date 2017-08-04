@@ -6,6 +6,9 @@
 
 ![image](https://github.com/zhuzhuxingtianxia/SearchDemo/blob/master/2.png)
 
+## 实现PopOver功能
+![image](https://github.com/zhuzhuxingtianxia/SearchDemo/blob/master/099.png)
+
 ## 使用说明
   这个搜索小功能是对textField的一个扩展，所以我们首先站到UITextField+PopOver这个扩展类，然后把它添加到工程去。
 <br>

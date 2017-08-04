@@ -7,8 +7,8 @@
 //
 
 #import "ViewController.h"
-
-@interface ViewController ()
+#import "HeaderView.h"
+@interface ViewController ()<HeaderViewDelegate>
 
 @end
 
@@ -18,7 +18,20 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     self.title = @"搜索控件";
+    
+    [self buildHeaderView];
 }
+-(void)buildHeaderView{
+    HeaderView *headerView = [[HeaderView alloc] initWithFrame:CGRectMake(0, 64, [UIScreen mainScreen].bounds.size.width, 60)];
+    headerView.delegate = self;
+    [self.view addSubview:headerView];
+}
+
+#pragma mark --HeaderViewDelegate
+-(void)headerView:(HeaderView*)headerView doSomething:(id)item{
+    NSLog(@"doSomething");
+}
+
 
 - (IBAction)logisticsSearch1:(id)sender {
     id vc1 = [[NSClassFromString(@"Search1Controller") alloc] init];

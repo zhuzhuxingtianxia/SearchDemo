@@ -21,8 +21,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="foT-vM-XVq">
+                                <rect key="frame" x="46" y="421" width="123" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="禁止输入直接选择"/>
+                                <connections>
+                                    <action selector="logisticsSearch2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="omF-X3-a77"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gxX-Fl-2W7">
-                                <rect key="frame" x="69" y="98" width="77" height="30"/>
+                                <rect key="frame" x="62" y="232" width="77" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="物流搜索上"/>
                                 <connections>
@@ -30,7 +38,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sEz-1k-kfq">
-                                <rect key="frame" x="249" y="98" width="77" height="30"/>
+                                <rect key="frame" x="242" y="232" width="77" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="物流搜索下"/>
                                 <connections>
@@ -38,7 +46,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V5o-lR-5EJ">
-                                <rect key="frame" x="76" y="203" width="62" height="30"/>
+                                <rect key="frame" x="69" y="337" width="62" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="人物搜索"/>
                                 <connections>
@@ -46,19 +54,11 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FFF-at-8zN">
-                                <rect key="frame" x="233" y="203" width="108" height="30"/>
+                                <rect key="frame" x="226" y="337" width="108" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="滑动隐藏下拉框"/>
                                 <connections>
                                     <action selector="hidePopView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="J9f-mC-bBF"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="foT-vM-XVq">
-                                <rect key="frame" x="50" y="318" width="123" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="禁止输入直接选择"/>
-                                <connections>
-                                    <action selector="logisticsSearch2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="omF-X3-a77"/>
                                 </connections>
                             </button>
                         </subviews>

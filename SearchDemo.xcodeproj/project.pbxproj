@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B6103D6F1F344A6A0047B1A1 /* popover@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B6103D6A1F344A6A0047B1A1 /* popover@2x.png */; };
+		B6103D701F344A6A0047B1A1 /* PopOverView.m in Sources */ = {isa = PBXBuildFile; fileRef = B6103D6C1F344A6A0047B1A1 /* PopOverView.m */; };
+		B6103D711F344A6A0047B1A1 /* UITextField+PopOver.m in Sources */ = {isa = PBXBuildFile; fileRef = B6103D6E1F344A6A0047B1A1 /* UITextField+PopOver.m */; };
+		B6103D7D1F344A790047B1A1 /* InputController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6103D741F344A790047B1A1 /* InputController.m */; };
+		B6103D7E1F344A790047B1A1 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = B6103D761F344A790047B1A1 /* Person.m */; };
+		B6103D7F1F344A790047B1A1 /* PersonSearch1Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = B6103D781F344A790047B1A1 /* PersonSearch1Controller.m */; };
+		B6103D801F344A790047B1A1 /* Search1Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = B6103D7A1F344A790047B1A1 /* Search1Controller.m */; };
+		B6103D811F344A790047B1A1 /* Search2Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = B6103D7C1F344A790047B1A1 /* Search2Controller.m */; };
+		B6103D851F344AFE0047B1A1 /* HeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = B6103D841F344AFE0047B1A1 /* HeaderView.m */; };
+		B6103D881F344B2B0047B1A1 /* ZJMyButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B6103D871F344B2B0047B1A1 /* ZJMyButton.m */; };
+		B6103D8A1F344F540047B1A1 /* btn-_down@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B6103D891F344F540047B1A1 /* btn-_down@2x.png */; };
 		B62378121EF91B6F004DE0DB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B62378111EF91B6F004DE0DB /* main.m */; };
 		B62378151EF91B6F004DE0DB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B62378141EF91B6F004DE0DB /* AppDelegate.m */; };
 		B62378181EF91B70004DE0DB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B62378171EF91B70004DE0DB /* ViewController.m */; };
@@ -15,12 +26,6 @@
 		B62378201EF91B70004DE0DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B623781E1EF91B70004DE0DB /* LaunchScreen.storyboard */; };
 		B623782B1EF91B70004DE0DB /* SearchDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B623782A1EF91B70004DE0DB /* SearchDemoTests.m */; };
 		B62378361EF91B70004DE0DB /* SearchDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B62378351EF91B70004DE0DB /* SearchDemoUITests.m */; };
-		B62378451EF91CF3004DE0DB /* UITextField+PopOver.m in Sources */ = {isa = PBXBuildFile; fileRef = B62378441EF91CF3004DE0DB /* UITextField+PopOver.m */; };
-		B62378481EF91D58004DE0DB /* Search1Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = B62378471EF91D58004DE0DB /* Search1Controller.m */; };
-		B623784B1EF91D6C004DE0DB /* Search2Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = B623784A1EF91D6C004DE0DB /* Search2Controller.m */; };
-		B623784E1EF93674004DE0DB /* PersonSearch1Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = B623784D1EF93674004DE0DB /* PersonSearch1Controller.m */; };
-		B62378511EF9369F004DE0DB /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = B62378501EF9369F004DE0DB /* Person.m */; };
-		B62378541EF93A1A004DE0DB /* InputController.m in Sources */ = {isa = PBXBuildFile; fileRef = B62378531EF93A1A004DE0DB /* InputController.m */; };
 		B690BA491F2AE4A30011FD8B /* NSObject+AutoProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = B690BA481F2AE4A30011FD8B /* NSObject+AutoProperty.m */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +47,26 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B6103D6A1F344A6A0047B1A1 /* popover@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "popover@2x.png"; sourceTree = "<group>"; };
+		B6103D6B1F344A6A0047B1A1 /* PopOverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopOverView.h; sourceTree = "<group>"; };
+		B6103D6C1F344A6A0047B1A1 /* PopOverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopOverView.m; sourceTree = "<group>"; };
+		B6103D6D1F344A6A0047B1A1 /* UITextField+PopOver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+PopOver.h"; sourceTree = "<group>"; };
+		B6103D6E1F344A6A0047B1A1 /* UITextField+PopOver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+PopOver.m"; sourceTree = "<group>"; };
+		B6103D731F344A790047B1A1 /* InputController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputController.h; sourceTree = "<group>"; };
+		B6103D741F344A790047B1A1 /* InputController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputController.m; sourceTree = "<group>"; };
+		B6103D751F344A790047B1A1 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		B6103D761F344A790047B1A1 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		B6103D771F344A790047B1A1 /* PersonSearch1Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonSearch1Controller.h; sourceTree = "<group>"; };
+		B6103D781F344A790047B1A1 /* PersonSearch1Controller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonSearch1Controller.m; sourceTree = "<group>"; };
+		B6103D791F344A790047B1A1 /* Search1Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Search1Controller.h; sourceTree = "<group>"; };
+		B6103D7A1F344A790047B1A1 /* Search1Controller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Search1Controller.m; sourceTree = "<group>"; };
+		B6103D7B1F344A790047B1A1 /* Search2Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Search2Controller.h; sourceTree = "<group>"; };
+		B6103D7C1F344A790047B1A1 /* Search2Controller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Search2Controller.m; sourceTree = "<group>"; };
+		B6103D831F344AFE0047B1A1 /* HeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderView.h; sourceTree = "<group>"; };
+		B6103D841F344AFE0047B1A1 /* HeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderView.m; sourceTree = "<group>"; };
+		B6103D861F344B2B0047B1A1 /* ZJMyButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJMyButton.h; sourceTree = "<group>"; };
+		B6103D871F344B2B0047B1A1 /* ZJMyButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJMyButton.m; sourceTree = "<group>"; };
+		B6103D891F344F540047B1A1 /* btn-_down@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-_down@2x.png"; sourceTree = "<group>"; };
 		B623780D1EF91B6F004DE0DB /* SearchDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SearchDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B62378111EF91B6F004DE0DB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B62378131EF91B6F004DE0DB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -58,18 +83,6 @@
 		B62378311EF91B70004DE0DB /* SearchDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SearchDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B62378351EF91B70004DE0DB /* SearchDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchDemoUITests.m; sourceTree = "<group>"; };
 		B62378371EF91B70004DE0DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B62378431EF91CF3004DE0DB /* UITextField+PopOver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+PopOver.h"; sourceTree = "<group>"; };
-		B62378441EF91CF3004DE0DB /* UITextField+PopOver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+PopOver.m"; sourceTree = "<group>"; };
-		B62378461EF91D58004DE0DB /* Search1Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Search1Controller.h; sourceTree = "<group>"; };
-		B62378471EF91D58004DE0DB /* Search1Controller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Search1Controller.m; sourceTree = "<group>"; };
-		B62378491EF91D6C004DE0DB /* Search2Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Search2Controller.h; sourceTree = "<group>"; };
-		B623784A1EF91D6C004DE0DB /* Search2Controller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Search2Controller.m; sourceTree = "<group>"; };
-		B623784C1EF93674004DE0DB /* PersonSearch1Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonSearch1Controller.h; sourceTree = "<group>"; };
-		B623784D1EF93674004DE0DB /* PersonSearch1Controller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonSearch1Controller.m; sourceTree = "<group>"; };
-		B623784F1EF9369F004DE0DB /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
-		B62378501EF9369F004DE0DB /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
-		B62378521EF93A1A004DE0DB /* InputController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputController.h; sourceTree = "<group>"; };
-		B62378531EF93A1A004DE0DB /* InputController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputController.m; sourceTree = "<group>"; };
 		B690BA471F2AE49D0011FD8B /* NSObject+AutoProperty.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+AutoProperty.h"; sourceTree = "<group>"; };
 		B690BA481F2AE4A30011FD8B /* NSObject+AutoProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+AutoProperty.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -99,6 +112,55 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B6103D681F344A6A0047B1A1 /* PopOverTools */ = {
+			isa = PBXGroup;
+			children = (
+				B6103D691F344A6A0047B1A1 /* PopOverView */,
+				B6103D6D1F344A6A0047B1A1 /* UITextField+PopOver.h */,
+				B6103D6E1F344A6A0047B1A1 /* UITextField+PopOver.m */,
+			);
+			path = PopOverTools;
+			sourceTree = "<group>";
+		};
+		B6103D691F344A6A0047B1A1 /* PopOverView */ = {
+			isa = PBXGroup;
+			children = (
+				B6103D6A1F344A6A0047B1A1 /* popover@2x.png */,
+				B6103D6B1F344A6A0047B1A1 /* PopOverView.h */,
+				B6103D6C1F344A6A0047B1A1 /* PopOverView.m */,
+			);
+			path = PopOverView;
+			sourceTree = "<group>";
+		};
+		B6103D721F344A790047B1A1 /* SearchDemo */ = {
+			isa = PBXGroup;
+			children = (
+				B6103D731F344A790047B1A1 /* InputController.h */,
+				B6103D741F344A790047B1A1 /* InputController.m */,
+				B6103D751F344A790047B1A1 /* Person.h */,
+				B6103D761F344A790047B1A1 /* Person.m */,
+				B6103D771F344A790047B1A1 /* PersonSearch1Controller.h */,
+				B6103D781F344A790047B1A1 /* PersonSearch1Controller.m */,
+				B6103D791F344A790047B1A1 /* Search1Controller.h */,
+				B6103D7A1F344A790047B1A1 /* Search1Controller.m */,
+				B6103D7B1F344A790047B1A1 /* Search2Controller.h */,
+				B6103D7C1F344A790047B1A1 /* Search2Controller.m */,
+			);
+			path = SearchDemo;
+			sourceTree = "<group>";
+		};
+		B6103D821F344AD00047B1A1 /* PopOverViewDemo */ = {
+			isa = PBXGroup;
+			children = (
+				B6103D891F344F540047B1A1 /* btn-_down@2x.png */,
+				B6103D861F344B2B0047B1A1 /* ZJMyButton.h */,
+				B6103D871F344B2B0047B1A1 /* ZJMyButton.m */,
+				B6103D831F344AFE0047B1A1 /* HeaderView.h */,
+				B6103D841F344AFE0047B1A1 /* HeaderView.m */,
+			);
+			path = PopOverViewDemo;
+			sourceTree = "<group>";
+		};
 		B62378041EF91B6F004DE0DB = {
 			isa = PBXGroup;
 			children = (
@@ -122,26 +184,17 @@
 		B623780F1EF91B6F004DE0DB /* SearchDemo */ = {
 			isa = PBXGroup;
 			children = (
+				B6103D681F344A6A0047B1A1 /* PopOverTools */,
 				B62378131EF91B6F004DE0DB /* AppDelegate.h */,
 				B62378141EF91B6F004DE0DB /* AppDelegate.m */,
 				B62378161EF91B6F004DE0DB /* ViewController.h */,
 				B62378171EF91B70004DE0DB /* ViewController.m */,
-				B62378461EF91D58004DE0DB /* Search1Controller.h */,
-				B62378471EF91D58004DE0DB /* Search1Controller.m */,
-				B62378491EF91D6C004DE0DB /* Search2Controller.h */,
-				B623784A1EF91D6C004DE0DB /* Search2Controller.m */,
-				B623784C1EF93674004DE0DB /* PersonSearch1Controller.h */,
-				B623784D1EF93674004DE0DB /* PersonSearch1Controller.m */,
-				B62378521EF93A1A004DE0DB /* InputController.h */,
-				B62378531EF93A1A004DE0DB /* InputController.m */,
-				B623784F1EF9369F004DE0DB /* Person.h */,
-				B62378501EF9369F004DE0DB /* Person.m */,
+				B6103D821F344AD00047B1A1 /* PopOverViewDemo */,
+				B6103D721F344A790047B1A1 /* SearchDemo */,
 				B62378191EF91B70004DE0DB /* Main.storyboard */,
 				B690BA471F2AE49D0011FD8B /* NSObject+AutoProperty.h */,
 				B690BA481F2AE4A30011FD8B /* NSObject+AutoProperty.m */,
 				B623781C1EF91B70004DE0DB /* Assets.xcassets */,
-				B62378431EF91CF3004DE0DB /* UITextField+PopOver.h */,
-				B62378441EF91CF3004DE0DB /* UITextField+PopOver.m */,
 				B623781E1EF91B70004DE0DB /* LaunchScreen.storyboard */,
 				B62378211EF91B70004DE0DB /* Info.plist */,
 				B62378101EF91B6F004DE0DB /* Supporting Files */,
@@ -283,7 +336,9 @@
 			files = (
 				B62378201EF91B70004DE0DB /* LaunchScreen.storyboard in Resources */,
 				B623781D1EF91B70004DE0DB /* Assets.xcassets in Resources */,
+				B6103D6F1F344A6A0047B1A1 /* popover@2x.png in Resources */,
 				B623781B1EF91B70004DE0DB /* Main.storyboard in Resources */,
+				B6103D8A1F344F540047B1A1 /* btn-_down@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,16 +363,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6103D701F344A6A0047B1A1 /* PopOverView.m in Sources */,
+				B6103D881F344B2B0047B1A1 /* ZJMyButton.m in Sources */,
 				B62378181EF91B70004DE0DB /* ViewController.m in Sources */,
-				B62378451EF91CF3004DE0DB /* UITextField+PopOver.m in Sources */,
-				B62378511EF9369F004DE0DB /* Person.m in Sources */,
-				B62378481EF91D58004DE0DB /* Search1Controller.m in Sources */,
+				B6103D7E1F344A790047B1A1 /* Person.m in Sources */,
 				B62378151EF91B6F004DE0DB /* AppDelegate.m in Sources */,
+				B6103D811F344A790047B1A1 /* Search2Controller.m in Sources */,
+				B6103D711F344A6A0047B1A1 /* UITextField+PopOver.m in Sources */,
+				B6103D7D1F344A790047B1A1 /* InputController.m in Sources */,
+				B6103D851F344AFE0047B1A1 /* HeaderView.m in Sources */,
+				B6103D7F1F344A790047B1A1 /* PersonSearch1Controller.m in Sources */,
+				B6103D801F344A790047B1A1 /* Search1Controller.m in Sources */,
 				B690BA491F2AE4A30011FD8B /* NSObject+AutoProperty.m in Sources */,
-				B62378541EF93A1A004DE0DB /* InputController.m in Sources */,
-				B623784B1EF91D6C004DE0DB /* Search2Controller.m in Sources */,
 				B62378121EF91B6F004DE0DB /* main.m in Sources */,
-				B623784E1EF93674004DE0DB /* PersonSearch1Controller.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
