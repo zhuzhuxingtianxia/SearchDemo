@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PopOverView.h"
 @class HeaderView;
 @protocol HeaderViewDelegate <NSObject>
 
--(void)headerView:(HeaderView*)headerView doSomething:(id)item;
+-(void)headerViewWithPopOverView:(PopOverView*)popView doSomething:(id)item;
 
 @end
 

@@ -28,8 +28,8 @@
 }
 
 #pragma mark --HeaderViewDelegate
--(void)headerView:(HeaderView*)headerView doSomething:(id)item{
-    NSLog(@"doSomething");
+-(void)headerViewWithPopOverView:(PopOverView *)popView doSomething:(id)item{
+    NSLog(@"%ld --  %@",popView.tag,item);
 }
 
 

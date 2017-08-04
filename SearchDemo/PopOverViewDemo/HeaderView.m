@@ -8,7 +8,6 @@
 
 #import "HeaderView.h"
 #import "ZJMyButton.h"
-#import "PopOverView.h"
 
 @interface HeaderView ()<PopOverViewDelegate>
 {
@@ -78,8 +77,8 @@
     NSLog(@"点击 %@",item);
     if (item) {
         [(ZJMyButton*)popOverView.ownerView setTitle:[NSString stringWithFormat:@"%@  ",item] forState:UIControlStateNormal];
-        if ([self.delegate respondsToSelector:@selector(headerView:doSomething:)]) {
-            [self.delegate headerView:self doSomething:item];
+        if ([self.delegate respondsToSelector:@selector(headerViewWithPopOverView:doSomething:)]) {
+            [self.delegate headerViewWithPopOverView:popOverView doSomething:item];
         }
     }
     
@@ -106,6 +105,7 @@
         [self addSubview:sender];
         //设置popOver
         PopOverView *popOverView = [[PopOverView alloc] init];
+        popOverView.tag = j;
         popOverView.delegate = self;
         if (!self.popOverArray) {
             self.popOverArray = [NSMutableArray arrayWithCapacity:3];
