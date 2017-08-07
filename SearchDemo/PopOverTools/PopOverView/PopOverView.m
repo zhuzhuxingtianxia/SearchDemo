@@ -14,7 +14,7 @@
 @interface PopOverView ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 {
     UIView *supViewOfPopOver;
-    BOOL   initPoint;
+    CGRect   initPoint;
 }
 @property(nonatomic,strong)UIImageView *popOverImg;
 @property(nonatomic,strong)UICollectionView *collection;
@@ -74,11 +74,24 @@
     if (supViewOfPopOver) {
         [supViewOfPopOver addSubview:self];
     }
-    CGPoint position = [_ownerView.superview convertPoint:_ownerView.center toView:[[UIApplication sharedApplication] keyWindow]];
     
-    if (!initPoint) {
-        self.frame = CGRectMake(position.x, position.y + _ownerView.bounds.size.height/2, 0, 0);
-        initPoint = YES;
+    CGPoint position;
+    if ([supViewOfPopOver isKindOfClass:[UITableView class]]) {
+        position = [_ownerView.superview convertPoint:_ownerView.center toView:supViewOfPopOver];
+        
+    }else{
+        position = [_ownerView.superview convertPoint:_ownerView.center toView:[[UIApplication sharedApplication] keyWindow]];
+    }
+    
+    if (CGRectIsNull(initPoint)) {
+        initPoint = CGRectZero;
+    }
+    if (initPoint.size.height == 0) {
+        self.frame = CGRectMake(position.x, position.y + _ownerView.bounds.size.height/2, 0, self.bounds.size.height);
+        initPoint = CGRectMake(0, 0, 0, 1);
+    }else{
+        self.frame = CGRectMake(position.x -_ownerView.bounds.size.width/2, position.y + _ownerView.bounds.size.height/2, 0, self.bounds.size.height);
+        initPoint = CGRectZero;
     }
 
     [UIView animateWithDuration:0.25 animations:^{
