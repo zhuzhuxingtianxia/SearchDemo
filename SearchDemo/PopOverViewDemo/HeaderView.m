@@ -50,17 +50,17 @@
     switch (sender.tag) {
         case 0:
         {
-            popOver.dataSoure = @[@"小户型",@"一室户",@"二室户",@"三室户",@"四室户",@"别墅",@"其他"];
+            popOver.dataSoure = @[@"不限",@"小户型",@"一室户",@"二室户",@"三室户",@"四室户",@"别墅",@"其他"];
         }
             break;
         case 1:
         {
-            popOver.dataSoure = @[@"现代简约",@"欧美风格",@"大众风格",@"地中海风情",@"古典美",@"日式",@"田园风情",@"其他",];
+            popOver.dataSoure = @[@"不限",@"现代简约",@"欧美风格",@"大众风格",@"地中海风情",@"古典美",@"日式",@"美式",@"欧式",@"田园风情",@"其他",];
         }
             break;
         case 2:
         {
-            popOver.dataSoure = @[@"2-5万",@"5-10万",@"10-20万",@"二十万以上"];
+            popOver.dataSoure = @[@"不限",@"2-5万",@"5-10万",@"10-20万",@"二十万以上"];
         }
             break;
             
@@ -76,7 +76,28 @@
 -(void)popOverView:(PopOverView*)popOverView didSelectItem:(id)item{
     NSLog(@"点击 %@",item);
     if (item) {
-        [(ZJMyButton*)popOverView.ownerView setTitle:[NSString stringWithFormat:@"%@  ",item] forState:UIControlStateNormal];
+        if ([item containsString:@"不限"]) {
+            NSString *title;
+            switch (popOverView.ownerView.tag) {
+                case 0:
+                    title = @"户型";
+                    break;
+                case 1:
+                    title = @"风格";
+                    break;
+                case 2:
+                    title = @"价格";
+                    break;
+                    
+                default:
+                    break;
+            }
+            [(ZJMyButton*)popOverView.ownerView setTitle:[NSString stringWithFormat:@"%@  ",title] forState:UIControlStateNormal];
+            
+        }else{
+            [(ZJMyButton*)popOverView.ownerView setTitle:[NSString stringWithFormat:@"%@  ",item] forState:UIControlStateNormal];
+        }
+        
         if ([self.delegate respondsToSelector:@selector(headerViewWithPopOverView:doSomething:)]) {
             [self.delegate headerViewWithPopOverView:popOverView doSomething:item];
         }
@@ -87,7 +108,7 @@
 
 #pragma mark -- getter
 -(void)createButtons{
-    NSArray *titleArray = @[@"小户型  ",@"现代简约  ",@"2-5万  "];
+    NSArray *titleArray = @[@"户型  ",@"风格  ",@"价格  "];
     CGFloat widh = (self.frame.size.width - 12*2 - 2*10)/3;
     for (NSInteger j = 0; j < titleArray.count; j++) {
         ZJMyButton *sender = [ZJMyButton buttonWithType:UIButtonTypeSystem];

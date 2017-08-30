@@ -19,6 +19,12 @@
 @end
 
 @interface PopOverView : UIView
+/*
+ 如果数据源数组是字典或model，则必须填写key值用于获取数据
+ 例如：@{@“key”:@"name"}
+ */
+-(instancetype)initWithKey:(NSString*)key;
+
 //持有者,popOver的主人
 @property(nonatomic,weak)UIView *ownerView;
 //数据源

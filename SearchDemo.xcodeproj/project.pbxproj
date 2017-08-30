@@ -26,6 +26,7 @@
 		B62378201EF91B70004DE0DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B623781E1EF91B70004DE0DB /* LaunchScreen.storyboard */; };
 		B623782B1EF91B70004DE0DB /* SearchDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B623782A1EF91B70004DE0DB /* SearchDemoTests.m */; };
 		B62378361EF91B70004DE0DB /* SearchDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B62378351EF91B70004DE0DB /* SearchDemoUITests.m */; };
+		B6257F1E1F56889800D834BC /* popover_bai.png in Resources */ = {isa = PBXBuildFile; fileRef = B6257F1D1F56889800D834BC /* popover_bai.png */; };
 		B690BA491F2AE4A30011FD8B /* NSObject+AutoProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = B690BA481F2AE4A30011FD8B /* NSObject+AutoProperty.m */; };
 /* End PBXBuildFile section */
 
@@ -83,6 +84,7 @@
 		B62378311EF91B70004DE0DB /* SearchDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SearchDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B62378351EF91B70004DE0DB /* SearchDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchDemoUITests.m; sourceTree = "<group>"; };
 		B62378371EF91B70004DE0DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B6257F1D1F56889800D834BC /* popover_bai.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = popover_bai.png; sourceTree = "<group>"; };
 		B690BA471F2AE49D0011FD8B /* NSObject+AutoProperty.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+AutoProperty.h"; sourceTree = "<group>"; };
 		B690BA481F2AE4A30011FD8B /* NSObject+AutoProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+AutoProperty.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -125,6 +127,7 @@
 		B6103D691F344A6A0047B1A1 /* PopOverView */ = {
 			isa = PBXGroup;
 			children = (
+				B6257F1D1F56889800D834BC /* popover_bai.png */,
 				B6103D6A1F344A6A0047B1A1 /* popover@2x.png */,
 				B6103D6B1F344A6A0047B1A1 /* PopOverView.h */,
 				B6103D6C1F344A6A0047B1A1 /* PopOverView.m */,
@@ -334,6 +337,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6257F1E1F56889800D834BC /* popover_bai.png in Resources */,
 				B62378201EF91B70004DE0DB /* LaunchScreen.storyboard in Resources */,
 				B623781D1EF91B70004DE0DB /* Assets.xcassets in Resources */,
 				B6103D6F1F344A6A0047B1A1 /* popover@2x.png in Resources */,

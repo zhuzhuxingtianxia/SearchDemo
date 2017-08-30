@@ -13,7 +13,7 @@
 
 @interface PopOverView ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 {
-    UIView *supViewOfPopOver;
+   __weak UIView *supViewOfPopOver;
     CGRect   initPoint;
 }
 @property(nonatomic,strong)UIImageView *popOverImg;
@@ -21,8 +21,17 @@
 @property(nonatomic,strong)UIControl   *bgControl;
 //记录选中的索引
 @property(nonatomic,strong)NSIndexPath  *indexPath;
+@property(nonatomic,strong)NSString  *key;
+
 @end
 @implementation PopOverView
+-(instancetype)initWithKey:(NSString*)key{
+    self = [self init];
+    if (self) {
+        self.key = key;
+    }
+    return self;
+}
 
 -(instancetype)init{
     self = [super init];
@@ -53,9 +62,9 @@
             self.collection.frame = CGRectMake(5, TopEdge - 2, self.bounds.size.width, 0);
         }else{
             CGRect rect = self.frame;
-            rect.size.height = CellH * _dataSoure.count + TopEdge;
+            rect.size.height = CellH * _dataSoure.count + TopEdge > [[UIScreen mainScreen] bounds].size.height*0.5 ? [[UIScreen mainScreen] bounds].size.height*0.5 : CellH * _dataSoure.count + TopEdge;
             self.frame = rect;
-            self.collection.frame = CGRectMake(5, TopEdge - 2, self.bounds.size.width - 10, CellH * _dataSoure.count);
+            self.collection.frame = CGRectMake(5, TopEdge - 2, self.bounds.size.width - 10, rect.size.height - TopEdge);
         }
 
         self.popOverImg.frame = self.bounds;
@@ -134,8 +143,13 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     PopOverCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"popoverCell" forIndexPath:indexPath];
-    NSString *title = self.dataSoure[indexPath.row];
-    cell.contentLabel.text = title;
+    id item = self.dataSoure[indexPath.row];
+    if ([item isKindOfClass:[NSString class]]) {
+        cell.contentLabel.text = item;
+    }else{
+        cell.contentLabel.text = [item valueForKey:self.key];
+    }
+    
     if (indexPath == _indexPath) {
         cell.contentLabel.textColor = [UIColor redColor];
     }else{
